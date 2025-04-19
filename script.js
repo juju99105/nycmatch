@@ -237,29 +237,41 @@ const quiz = [
     showQuestion(currentQuestionIndex);
   }
   
-  function showResults() {
-    quizContainer.innerHTML = '';
+function showResults() {
+  quizContainer.innerHTML = '';
+
+  // Filter out candidates with zero points
+  const nonZeroResults = Object.entries(candidates)
+    .filter(([_, score]) => score > 0)
+    .sort((a, b) => b[1] - a[1]);
+
+  let resultHTML = '<h2>Your Top Candidates</h2>';
   
-    // Filter out candidates with zero points
-    const nonZeroResults = Object.entries(candidates)
-      .filter(([_, score]) => score > 0)
-      .sort((a, b) => b[1] - a[1]);
-  
-    let resultHTML = '<h2>Your Top Candidates</h2>';
-    
-    if (nonZeroResults.length === 0) {
-      resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
-    } else {
-      // Show up to top 5 candidates with non-zero scores
-      const topCandidates = nonZeroResults.slice(0, 5);
-      resultHTML += topCandidates.map(([name, score], i) => 
-        `<p>${i + 1}. ${name} – ${score} point(s)</p>`
-      ).join('');
-    }
-    
-    resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
-  
-    resultsContainer.innerHTML = resultHTML;
+  if (nonZeroResults.length === 0) {
+    resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
+  } else {
+    // Show up to top 5 candidates with non-zero scores
+    const topCandidates = nonZeroResults.slice(0, 5);
+    resultHTML += topCandidates.map(([name, score], i) => 
+      `<p>${i + 1}. ${name} – ${score} point(s)</p>`
+    ).join('');
   }
+
+  resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+
+  // Add Google Form iframe
+  resultHTML += `
+    <div style="margin-top: 30px;">
+      <h3>Please give us your feedback</h3>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEWVuPKAJkjz8iLnl9WkIFf7fDsDjsbboN0VRR13_JCNy4ug/viewform?embedded=true" 
+              width="640" height="1442" frameborder="0" marginheight="0" marginwidth="0">
+        Loading…
+      </iframe>
+    </div>
+  `;
+
+  resultsContainer.innerHTML = resultHTML;
+}
+
   
   showQuestion(currentQuestionIndex);
