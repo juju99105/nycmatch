@@ -1,6 +1,6 @@
 const candidates = {
   "Adams": 0, "Blake": 0, "Cuomo": 0, "Lander": 0, "Myrie": 0,
-  "Sliwa": 0, "Stringer": 0, "Tilson": 0, "Mamdani": 0, "Ramos": 0
+  "Stringer": 0, "Tilson": 0, "Mamdani": 0, "Ramos": 0
 };
 
 const questionStats = {
@@ -17,7 +17,6 @@ const quiz = [
         { text: "Publish monthly subway safety report cards with community oversight", candidates: ["Cuomo"] },
         { text: "Launch transparency dashboards for homelessness and staffing + Reform public construction project management", candidates: ["Lander"] },
         { text: "Challenge federal overreach + Quarterly reports on flood mitigation", candidates: ["Myrie"] },
-        { text: "Audit all agencies and end corporate tax breaks + Investigate migrant spending + prioritize NYC residents", candidates: ["Sliwa"] },
         { text: "Ban pay-to-play lobbying + Require detailed budget transparency ", candidates: ["Stringer"] },
         { text: "Eradicate systemic corruption in shelter operations", candidates: ["Tilson"] },
         { text: "Skip this Question", candidates: [], isSkip: true }
@@ -29,7 +28,6 @@ const quiz = [
         { text: "Focused on stopping drug trafficking and helping people recover rather than traditional policing", candidates: ["Blake"] },
         { text: "Hire 5,000+ NYPD Officers + Pinpoint high-crime locations and repeat offenders", candidates: ["Cuomo", "Tilson"] },
         { text: "Reform NYPD to focus on gun violence/hate crimes", candidates: ["Lander"] },
-        { text: "Hire and deploy 7,000 NYPD officers to subways + Install emergency call boxes in all 472 stations + Harsher penalties for repeat offenders", candidates: ["Sliwa"] },
         { text: "Hire 3,000 officers + Deploy one on every subway train", candidates: ["Stringer"] },
         { text: "Skip this Question", candidates: [], isSkip: true }
       ]
@@ -42,7 +40,6 @@ const quiz = [
         { text: "Preserve 35K units + Assist homeowners to rent out extra rooms long-term + Protect tenants from harassment", candidates: ["Lander"] },
         { text: "Build 200,000 rent-stabilized units + Freeze rents + Take over bad landlords + Triple fines for violations + Fast-track 100% affordable developments + Double funds for NYC Housing Authority", candidates: ["Mamdani"] },
         { text: "Legalize basement apartments + Convert empty offices to housing + $50M down payment help for first-time buyers + Protect public housing", candidates: ["Ramos"] },
-        { text: "Rehab 26K vacant units + Return zoning control to local communities + more benefits to small property owners", candidates: ["Sliwa"] },
         { text: "$500M loan fund for minority developers + Secure $40B for NYC Housing Authority + Unlock public land", candidates: ["Stringer"] },
         { text: "Support private investment + Reform regulations to unlock large-scale housing development + Streamline zoning and permitting.", candidates: ["Tilson"] },
         { text: "Skip this Question", candidates: [], isSkip: true }
@@ -54,7 +51,6 @@ const quiz = [
         { text: "Provide Guaranteed Basic Income to end homelessness", candidates: ["Adams"] },
         { text: "Require treatment for people who can't care for themselves + Add psychiatric beds", candidates: ["Cuomo"] },
         { text: "\"Housing First\" for 2,000 mentally ill homeless + Require treatment for people who can't care for themselves + Add secure therapeutic beds", candidates: ["Lander"] },
-        { text: "Clear homeless from subways to shelters + Separate violent offenders + Reopen 30,000 psychiatric beds", candidates: ["Sliwa"] },
         { text: "Integrate mental health professionals into subways", candidates: ["Stringer"] },
         { text: "Repeal \"right to sleep outside\" + Expand shelters and drop-in centers + Reopen long-term care facilities", candidates: ["Tilson"] },
         { text: "Skip this Question", candidates: [], isSkip: true }
@@ -81,7 +77,6 @@ const quiz = [
         { text: "$30/hour minimum wage by 2030 + Create city-run grocery stores to provide wholesale prices", candidates: ["Mamdani"] },
         { text: "No-interest loans for Black businesses + Expand green job opportunities", candidates: ["Myrie"] },
         { text: "Focus outer-borough growth through child care infrastructure + Support local small businesses", candidates: ["Ramos"] },
-        { text: "Redirect incentives to outer borough small businesses + Revitalize local commercial districts + Boost non-Manhattan tourism", candidates: ["Sliwa"] },
         { text: "Support small business through streamlined permits + Expand minority and women-owned businesses to 50% + Create green jobs through renewable energy investments", candidates: ["Stringer"] },
         { text: "Revitalize the economy by supporting small businesses + Streamline permit process + Create jobs with higher wages", candidates: ["Tilson"] },
         { text: "Support small businesses + Guarantee predictable work hours + Fair pay for gig workers + Expand freelancer protections", candidates: ["Lander"] },
@@ -94,7 +89,6 @@ const quiz = [
         { text: "Hire 500 MTA police + Install high-security turnstiles + Implement proof-of-payment turnstiles", candidates: ["Cuomo"] },
         { text: "Make all city buses permanently fare-free + Expand bus priority lanes and loading zones", candidates: ["Mamdani"] },
         { text: "Implement congestion pricing + Improve subway/bus accessibility + Expand bike lanes", candidates: ["Lander"] },
-        { text: "24/7 staffed help booths in all stations + 500 additional transit officers + Expedited emergency response systems", candidates: ["Sliwa"] },
         { text: "Express bus lanes + Audit MTA construction costs", candidates: ["Myrie"] },
         { text: "Prioritize accessibility improvements and service reliability", candidates: ["Ramos"] },
         { text: "Increase subway safety with dedicated officers + Improve bus reliability + Expand bike lane network ", candidates: ["Stringer"] },
@@ -110,7 +104,6 @@ const quiz = [
         { text: "Reduce class sizes + Strengthen career/technical education ", candidates: ["Cuomo"] },
         { text: "Restore school budgets + Expand career/technical education + Improve special education services  ", candidates: ["Lander"] },
         { text: "Free afterschool programs until 6 PM ", candidates: ["Myrie"] },
-        { text: "Audit Department of Education's $40B budget to redirect funds to classrooms + Expand vocational programs (EMT/trades) + Protect SHSAT testing + Increase teacher pay ", candidates: ["Sliwa"] },
         { text: "Extend school days to 4:30 PM", candidates: ["Stringer"] },
         { text: "Focus on basic literacy/math ", candidates: ["Tilson"] },
         { text: "Skip this Question ", candidates: [], isSkip: true }
