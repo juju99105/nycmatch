@@ -263,7 +263,7 @@ function showResults() {
   resultHTML += `
   <div style="margin-top: 30px;">
     <h3>Please give us your feedback</h3>
-    <div style="position: relative; width: 100%; max-width: 640px; overflow: hidden; padding-top: 20px;">
+    <div style="position: relative; width: 100%; max-width: 400px; overflow: hidden; padding-top: 20px;">
       <iframe 
         src="https://docs.google.com/forms/d/e/1FAIpQLScEWVuPKAJkjz8iLnl9WkIFf7fDsDjsbboN0VRR13_JCNy4ug/viewform?embedded=true" 
         style="width: 100%; height: 1442px; border: none;"
