@@ -7,7 +7,7 @@
   
   body {
     font-family: 'Inter', sans-serif;
-    background-color: #0050FF;
+    background-color: #003cff;
     color: white;
     text-align: left;
     min-height: 100vh;
@@ -20,7 +20,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #0050FF;
+    background-color: #003cff;
     position: relative;
     z-index: 1000;
   }
@@ -45,7 +45,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #0050FF;
+    background-color: #003cff;
     position: fixed;
     top: 0;
     left: 0;
@@ -116,26 +116,23 @@
     font-size: 2rem;
     line-height: 1;
     text-align: left;
-    padding: 0.5rem;
+    padding: 1rem;
   }
   
   .headline span {
-    color: lime;
+    color: #3cff00;
   }
   
   /* Candidates grid */
   .candidates {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
     margin-top: 2rem;
     width: 100%;
   }
   
   .candidate-card {
     background: white;
-    color: black;
-    padding: 1rem;
   }
   
   .candidate-card h3 {
@@ -143,7 +140,7 @@
   }
   
   .visit-link {
-    color: lime;
+    color: #3cff00;
     text-decoration: underline;
     font-weight: 600;
     display: block;
@@ -161,7 +158,7 @@
   }
   
   .about-section h2 {
-    color: #0050FF;
+    color: #003cff;
     margin-bottom: 1rem;
   }
   
@@ -172,7 +169,7 @@
   }
   
   .note a {
-    color: lime;
+    color: #3cff00;
     text-decoration: underline;
   }
   
@@ -189,14 +186,16 @@
   .candidates {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 columns even on mobile */
-    gap: 1rem;
+    row-gap: 1rem;
+    column-gap: 1.2rem;
     margin-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     width: 100%;
   }
   
   .candidate-card {
-    background: #0050FF;
-    padding: 1rem;
+    background: #003cff;
     border-radius: 8px;
     text-align: left;
   }
@@ -208,16 +207,18 @@
   
   .candidate-card h3 {
     color: white;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    font-weight: 200;
     margin-top: 0.5rem;
     text-align: left;
+    line-height: 1.3rem;
   }
   
   .visit-link {
-    color: lime;
+    color: #3cff00;
     text-decoration: underline;
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 400;
+    font-size: 1.1rem;
     display: block;
     margin-top: 0.25rem;
     text-align: left;
@@ -230,7 +231,7 @@
   }
   
   .note a {
-    color: lime;
+    color: #3cff00;
     text-decoration: underline;
   }
 
@@ -241,7 +242,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #0050FF;
+    background-color: #003cff;
     position: fixed;
     top: 0;
     left: 0;
@@ -275,7 +276,7 @@ nav {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: #0050FF;
+    background-color: #003cff;
     position: fixed;
     top: 60px; 
     left: 0;
@@ -381,11 +382,11 @@ nav {
 .start-button {
     display: inline-block;
     margin-top: 3rem;
-    background-color: lime;
+    background-color: #3cff00;
     color: black;
     font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    padding: 1rem 10rem;
+    font-size: 1.8rem;
+    padding: 1.25rem 10rem;
     border: none;
     border-radius: 1px;
     text-decoration: none;
@@ -425,7 +426,7 @@ nav {
   .about-section h2 {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #0050FF;
+    color: #003cff;
     margin-bottom: 1rem;
   }
   
@@ -440,3 +441,26 @@ nav {
     font-weight: regular;
   }
 
+.container-index {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 32px 0 32px 0;
+}
+
+.container-explore{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding: 32px 0 32px 0;
+}
