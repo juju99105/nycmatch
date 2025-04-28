@@ -152,8 +152,6 @@
     background: white;
     color: black;
     margin: 0rem 0;
-    padding: 2rem;
-    border-radius: 8px;
     width: 100%;
   }
   
@@ -170,7 +168,7 @@
   
   .note a {
     color: #3cff00;
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   /* Grid Desktop layout */
@@ -192,6 +190,13 @@
     padding-left: 1rem;
     padding-right: 1rem;
     width: 100%;
+  }
+
+  .explore-title{
+    padding-left: 1rem;
+    border-top: white 0.5rem;
+    border-bottom: white 0.5rem;
+    font-weight: 400;
   }
   
   .candidate-card {
@@ -228,11 +233,15 @@
     font-size: 0.9rem;
     margin-top: 1rem;
     text-align: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 400;
   }
   
   .note a {
     color: #3cff00;
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: 400;
   }
 
  /* Nav Bar */
@@ -405,18 +414,19 @@ nav {
   }
   
   .about-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: inter;
+    font-weight: 400;
     margin-bottom: 2rem;
     text-align: left;
     color: black;
-    padding-top: 60px;
+    padding-top: 70px;
   }
   
   .about-section {
-    padding: 2rem 0;
+    padding: 1.5rem 0rem 1rem 0rem;
     border-top: 1px solid #ccc;
     text-align: left;
+    line-height: 0.1rem;
   }
   
   .about-section:first-of-type {
@@ -424,16 +434,17 @@ nav {
   }
   
   .about-section h2 {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #003cff;
     margin-bottom: 1rem;
   }
   
   .about-section p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: black;
-    line-height: 1.6;
+    line-height: 1.2;
+    font-weight: 350;
   }
 
   h1{
@@ -464,3 +475,22 @@ nav {
     margin-top: 60px;
     padding: 32px 0 32px 0;
 }
+
+.container-explore:first-child{
+    border: 2px solid #000; /* adjust color and thickness as needed */
+    padding: 10px; /* optional for better appearance */
+  }
+
+.container-about-page{
+    margin-top: 40px;
+}
+
+
+.about-body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    text-align: left;
+    min-height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
