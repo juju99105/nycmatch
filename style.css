@@ -389,18 +389,19 @@ nav {
 }
 
 .start-button {
-    display: inline-block;
-    margin-top: 3rem;
+    margin-top: 10vh;
     background-color: #3cff00;
     color: black;
     font-family: 'Inter', sans-serif;
-    font-size: 1.8rem;
-    padding: 1.25rem 10rem;
+    font-size: 1rem;
+    padding: 1rem 5rem;
     border: none;
     border-radius: 1px;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
+    width: 87vw;
+    text-align: center;
   }
   
 
@@ -494,3 +495,34 @@ nav {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+.content{
+    margin-top: 100px;
+}
+
+.quiz-body{
+    background-color: white;
+    color: black;
+    font-weight: 200;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+h2.intro-title{
+    color:#003cff;
+    font-weight: 800;
+}
+
+
+
+.container-quiz-page{
+    margin-top: 10vh;
+}
+
+.quiz-instruction1, .quiz-instruction2, .quiz-instruction3{
+    margin-top: 2vh;
+}
+
+.quiz-start-button{
+    align-items: center;
+}
