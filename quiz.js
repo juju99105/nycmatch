@@ -190,12 +190,22 @@ startQuizButton.addEventListener('click', function() {
 function showQuestion(index) {
   const q = quiz[index];
   
-  // Create question container
+  // // Create question container
+  // let questionHTML = `
+  //   <div class="question">
+  //     <h3>Question ${index + 1}/${quiz.length}: ${q.question}</h3>
+  //   </div>
+  // `;
+  
+  // Create question container but number of question seperate of question div
   let questionHTML = `
-    <div class="question">
-      <h3>Question ${index + 1}/${quiz.length}: ${q.question}</h3>
-    </div>
-  `;
+  <div class="question-number">
+    <h4>Question ${index + 1}/${quiz.length}</h4>
+  </div>
+  <div class="question">
+    <h3>${q.question}</h3>
+  </div>
+`;
   
   // Create options
   q.options.forEach((opt, i) => {
@@ -327,28 +337,108 @@ function showResults() {
       `;
     });
     
-    // Display the top candidate profile
-    const topCandidate = topCandidates[0];
-    if (topCandidate) {
-      const [name, score] = topCandidate;
+    //display questions skipped
+  resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+
+  function showResults() {
+  // Hide quiz container
+  quizContainer.style.display = 'none';
+  
+  // Show results container
+  resultsContainer.style.display = 'block';
+
+  // Filter out candidates with zero points
+  const nonZeroResults = Object.entries(candidates)
+    .filter(([_, score]) => score > 0)
+    .sort((a, b) => b[1] - a[1]);
+
+  let resultHTML = '<h2>Your Top Candidates</h2>';
+  
+  if (nonZeroResults.length === 0) {
+    resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
+  } else {
+    // Show top 5 candidates with non-zero scores
+    const topCandidates = nonZeroResults.slice(0, 5);
+    
+    // Create the list of top candidates
+    topCandidates.forEach(([name, score], i) => {
+      resultHTML += `
+        <div class="candidate-result">
+          <span class="candidate-rank">${i + 1}.</span>
+          <span class="candidate-name">${name}</span>
+          <span class="candidate-score">- ${score} Point${score > 1 ? 's' : ''}</span>
+        </div>
+      `;
+    });
+    
+    //display questions skipped
+    resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+
+    // Display ALL top candidate profiles
+    topCandidates.forEach(([name, score], i) => {
       resultHTML += `
         <div class="candidate-profile">
-          <img src="${name.toLowerCase()}.jpg" alt="${name}" onerror="this.src='placeholder.png'">
+          <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
           <h3>${name}</h3>
           <a href="#" class="candidate-website">Visit Website</a>
           
           <div class="stats-container">
-            <div class="rank-box">#1</div>
+            <div class="rank-box">#${i + 1}</div>
             <div class="questions-aligned">
               ${score}/${quiz.length} Aligned
             </div>
           </div>
         </div>
       `;
-    }
+    });
   }
 
-  resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+  resultsContainer.innerHTML = resultHTML;
+}
+
+
+  
+    // // Display the top candidate profile
+    // const topCandidate = topCandidates[0];
+    // if (topCandidate) {
+    //   const [name, score] = topCandidate;
+    //   resultHTML += `
+    //     <div class="candidate-profile">
+    //       <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
+    //       <h3>${name}</h3>
+    //       <a href="#" class="candidate-website">Visit Website</a>
+          
+    //       <div class="stats-container">
+    //         <div class="rank-box">#1</div>
+    //         <div class="questions-aligned">
+    //           ${score}/${quiz.length} Aligned
+    //         </div>
+    //       </div>
+    //     </div>
+    //   `;
+    // }
+  // }
+
+      // // Display the top candidate profile
+  topCandidates.forEach(([name, score], i) => {
+    resultHTML += `
+      <div class="candidate-profile">
+        <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
+        <h3>${name}</h3>
+        <a href="#" class="candidate-website">Visit Website</a>
+        
+        <div class="stats-container">
+          <div class="rank-box">#${i + 1}</div>
+          <div class="questions-aligned">
+            ${score}/${quiz.length} Aligned
+          </div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+  
 
   resultsContainer.innerHTML = resultHTML;
 }

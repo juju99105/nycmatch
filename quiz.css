@@ -71,16 +71,17 @@ body.quiz-body {
 /* Question styling */
 .question {
   background-color: white;
-  padding: 20px 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  /* padding: 20px 15px; */
+  padding: 0rem 0rem 0rem 0rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #003cff;
 }
 
 .question h3 {
   color: #003cff;
   font-weight: 600;
   font-size: 1.3rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem; 
   text-align: left;
 }
 
@@ -240,3 +241,22 @@ body.quiz-body {
   }
 }
 
+.question-number{
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #003cff;
+  font-weight: 300;
+  color: #003cff;
+}
+
+.navigation-buttons button.next {
+  background-color: #3cff00 !important;
+  border: none;
+  color: black;
+}
+
+.navigation-buttons button.back {
+  background-color: #3cff00 !important;
+  border: none;
+  color: black;
+}
