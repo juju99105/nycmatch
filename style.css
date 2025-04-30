@@ -256,7 +256,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 80px;
+    height: 90px;
     z-index: 1000;
   }
   
@@ -287,7 +287,7 @@ nav {
     align-items: center;
     background-color: #003cff;
     position: fixed;
-    top: 60px; 
+    top: 70px; 
     left: 0;
     width: 100%;
     height: calc(100vh - 60px); /* take full screen minus navbar */
@@ -302,10 +302,12 @@ nav {
   .nav-overlay li {
     width: 100%;
     border-top: 1px solid white;
+    border-bottom: 1px solid white;
   }
   
-  .nav-overlay li:first-child {
+  .nav-overlay li:nth-child(2) {
     border-top: none;
+    border-bottom: none;
   }
   
   /* Menu link style */
@@ -416,15 +418,14 @@ nav {
   
   .about-title {
     font-family: inter;
-    font-weight: 400;
-    margin-bottom: 2rem;
+    font-weight: 500;
     text-align: left;
     color: black;
-    padding-top: 70px;
+    padding-top: 3.5rem;
   }
   
   .about-section {
-    padding: 1.5rem 0rem 1rem 0rem;
+    padding: 1.5rem 2rem 1rem 2rem;
     border-top: 1px solid #ccc;
     text-align: left;
     line-height: 0.1rem;
@@ -432,6 +433,7 @@ nav {
   
   .about-section:first-of-type {
     border-top: none;
+    padding-top: 2.6rem;
   }
   
   .about-section h2 {
@@ -446,11 +448,6 @@ nav {
     color: black;
     line-height: 1.2;
     font-weight: 350;
-  }
-
-  h1{
-    text-align: left;
-    font-weight: regular;
   }
 
 .container-index {
@@ -492,8 +489,8 @@ nav {
     background-color: white;
     text-align: left;
     min-height: 100vh;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    /* padding-left: 2rem;
+    padding-right: 2rem; */
   }
 
 .content{
@@ -525,4 +522,16 @@ h2.intro-title{
 
 .quiz-start-button{
     align-items: center;
+}
+
+.about-title-div{
+  padding: 2rem 2rem 2rem 2rem;
+  border-bottom: 1.5px solid #003cff;
+}
+
+.explore-title-div{ 
+  border-bottom: 1.5px solid white;
+  border-top: 1.5px solid white;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
