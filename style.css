@@ -311,6 +311,7 @@ nav {
   }
   
   /* Menu link style */
+  /* Menu text */
   .nav-overlay a {
     display: block;
     width: 100%;
@@ -318,7 +319,7 @@ nav {
     color: white;
     text-align: center;
     font-size: 2rem;
-    font-weight: 100;
+    font-weight: 400;
     text-decoration: none;
   }
   
@@ -397,6 +398,8 @@ nav {
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     padding: 1rem 5rem;
+    max-width: 600px;
+    width: 100%;
     border: none;
     border-radius: 1px;
     text-decoration: none;
