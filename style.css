@@ -112,7 +112,7 @@
   
   /* Headline */
   .headline {
-    margin-top: 2rem;
+    margin-top: 1vh;
     font-size: 2rem;
     line-height: 1;
     text-align: left;
@@ -137,6 +137,7 @@
   
   .candidate-card h3 {
     margin-top: 0.5rem;
+    
   }
   
   .visit-link {
@@ -213,7 +214,7 @@
   .candidate-card h3 {
     color: white;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 0.5rem;
     text-align: left;
     line-height: 1.3rem;
@@ -266,7 +267,7 @@ nav {
     font-size: 1.5rem;
     line-height: 1.1;
     color: white;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 0.1rem;
   }
   
   /* Hamburger */
@@ -387,7 +388,7 @@ nav {
 .can-home {
     width: 100%;
     height: auto;
-    margin-top: 3vh;
+    margin-top: 2vh;
     object-fit: cover
 }
 
