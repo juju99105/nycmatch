@@ -441,6 +441,7 @@ nav {
     font-weight: 600;
     color: #003cff;
     margin-bottom: 1rem;
+    line-height: 1.5rem;
   }
   
   .about-section p {
@@ -510,18 +511,8 @@ h2.intro-title{
     font-weight: 800;
 }
 
-
-
 .container-quiz-page{
-    margin-top: 10vh;
-}
-
-.quiz-instruction1, .quiz-instruction2, .quiz-instruction3{
-    margin-top: 2vh;
-}
-
-.quiz-start-button{
-    align-items: center;
+    margin-top: 7vh;
 }
 
 .about-title-div{
