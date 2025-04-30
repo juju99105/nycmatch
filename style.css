@@ -127,6 +127,7 @@
     line-height: 1;
     text-align: left;
     padding: 1rem;
+    max-width: 860px;
   }
   
   .headline span {
@@ -399,6 +400,7 @@ nav {
 .can-home {
     width: 100%;
     height: auto;
+    max-height: 60vh;
     margin-top: 2vh;
     object-fit: cover
 }
@@ -410,14 +412,14 @@ nav {
     font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     padding: 1rem 5rem;
-    max-width: 600px;
+    max-width: 830px;
     width: 100%;
     border: none;
     border-radius: 1px;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-    width: 87vw;
+    width: 94vw;
     text-align: center;
     margin-top: 4vh;
   }
