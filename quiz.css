@@ -1,7 +1,7 @@
 /* Quiz styling */
 #quiz-container, #results {
   display: none;
-  margin-top: 80px;
+  margin-top: 17vh;
   width: 100%;
   max-width: 600px;
   margin-left: auto;
@@ -73,7 +73,7 @@ body.quiz-body {
   background-color: white;
   /* padding: 20px 15px; */
   padding: 0rem 0rem 0rem 0rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   border-bottom: 1px solid #003cff;
 }
 
@@ -88,10 +88,14 @@ body.quiz-body {
 #quiz-container button {
   display: block;
   width: 100%;
-  background-color: #f0f0f0;
-  border: none;
+  background-color: white;
+  border-bottom: 1px solid grey;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   padding: 15px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  /* margin-top: 10px; */
   text-align: left;
   cursor: pointer;
   font-size: 1rem;
@@ -105,14 +109,14 @@ body.quiz-body {
 
 /* Selected option styling */
 #quiz-container button.selected {
-  background-color: #cceeff;
+  background-color: #bfceff;
 }
 
 /* Back/Next buttons */
 .navigation-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 40px; /* Add space at bottom */
 }
 
@@ -137,13 +141,30 @@ body.quiz-body {
   background-color: white;
   padding: 20px;
   text-align: left;
+  margin-top: 11vh;
 }
 
 #results h2 {
   color: #003cff;
   font-size: 1.5rem;
+  margin-top: 20px;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+.nyc-votes{
+  border-bottom: 1px solid #003cff;
+}
+
+.nyc-votes h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.results-title{
+  border-top: 1px solid #003cff;
+  border-bottom: 1px solid #003cff;
 }
 
 .candidate-result {
@@ -226,7 +247,7 @@ body.quiz-body {
   }
   
   #quiz-container button {
-    padding: 12px;
+    padding: 2vh 1vh 2vh 1vh;
     font-size: 0.9rem;
   }
   
@@ -251,12 +272,23 @@ body.quiz-body {
 
 .navigation-buttons button.next {
   background-color: #3cff00 !important;
+  text-align: center !important;
   border: none;
   color: black;
+  border-bottom: none !important;
 }
 
 .navigation-buttons button.back {
-  background-color: #3cff00 !important;
-  border: none;
+  background-color: white !important;
+  border: 1px solid #003cff !important;
   color: black;
+  text-align: center !important;
+  margin-right: 1rem;
+}
+
+.stance {
+  margin-top: 2vh;
+  font-size: 0.7rem;
+  font-weight: 200;
+  margin-bottom: 1vh;
 }

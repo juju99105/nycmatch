@@ -8,32 +8,47 @@ const questionStats = {
   "skipped": 0
 };
 
+const candidateFullNames = {
+  "Adams": "Adrienne Adams",
+  "Blake": "Michael Blake",
+  "Cuomo": "Andrew Cuomo",
+  "Lander": "Brad Lander",
+  "Myrie": "Zellnor Myrie",
+  "Stringer": "Scott Stringer",
+  "Tilson": "Whitney Tilson",
+  "Mamdani": "Zohran Mamdani",
+  "Ramos": "Jessica Ramos"
+};
+
 const quiz = [
     {
       question: "How can NYC government become more transparent?",
+      stance: "(2 candidates have not declared a stance on this issue.)",
       options: [
-        { text: "Partner with nonprofits to track outcomes and tie funding to results", candidates: ["Adams"] },
-        { text: "Withhold NYC taxes dollar-for-dollar if federal funding is cut", candidates: ["Blake"] },
-        { text: "Publish monthly subway safety report cards with community oversight", candidates: ["Cuomo"] },
-        { text: "Launch transparency dashboards for homelessness and staffing + Reform public construction project management", candidates: ["Lander"] },
-        { text: "Challenge federal overreach + Quarterly reports on flood mitigation", candidates: ["Myrie"] },
-        { text: "Ban pay-to-play lobbying + Require detailed budget transparency ", candidates: ["Stringer"] },
-        { text: "Eradicate systemic corruption in shelter operations", candidates: ["Tilson"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "1. Partner with nonprofits to track outcomes and tie funding to results", candidates: ["Adams"] },
+        { text: "2. Withhold NYC taxes dollar-for-dollar if federal funding is cut", candidates: ["Blake"] },
+        { text: "3. Publish monthly subway safety report cards with community oversight", candidates: ["Cuomo"] },
+        { text: "4. Launch transparency dashboards for homelessness and staffing + Reform public construction project management", candidates: ["Lander"] },
+        { text: "5. Challenge federal overreach + Quarterly reports on flood mitigation", candidates: ["Myrie"] },
+        { text: "6. Ban pay-to-play lobbying + Require detailed budget transparency ", candidates: ["Stringer"] },
+        { text: "7. Eradicate systemic corruption in shelter operations", candidates: ["Tilson"] },
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC improve public safety?",
+      stance: "(4 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Focused on stopping drug trafficking and helping people recover rather than traditional policing", candidates: ["Blake"] },
         { text: "Hire 5,000+ NYPD Officers + Pinpoint high-crime locations and repeat offenders", candidates: ["Cuomo", "Tilson"] },
         { text: "Reform NYPD to focus on gun violence/hate crimes", candidates: ["Lander"] },
         { text: "Hire 3,000 officers + Deploy one on every subway train", candidates: ["Stringer"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC tackle its affordable housing crisis?",
+      stance: "(2 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Ban credit checks + Build 600,000 affordable homes for middle-income families + Reserve units for veterans/graduates/displaced natives", candidates: ["Blake"] },
         { text: "Leverage public land for mixed-income housing + Improve NYC Housing Authority", candidates: ["Cuomo"] },
@@ -42,22 +57,24 @@ const quiz = [
         { text: "Legalize basement apartments + Convert empty offices to housing + $50M down payment help for first-time buyers + Protect public housing", candidates: ["Ramos"] },
         { text: "$500M loan fund for minority developers + Secure $40B for NYC Housing Authority + Unlock public land", candidates: ["Stringer"] },
         { text: "Support private investment + Reform regulations to unlock large-scale housing development + Streamline zoning and permitting.", candidates: ["Tilson"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "What's the best way to address homelessness?",
+      stance: "(4 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Provide Guaranteed Basic Income to end homelessness", candidates: ["Adams"] },
         { text: "Require treatment for people who can't care for themselves + Add psychiatric beds", candidates: ["Cuomo"] },
         { text: "\"Housing First\" for 2,000 mentally ill homeless + Require treatment for people who can't care for themselves + Add secure therapeutic beds", candidates: ["Lander"] },
         { text: "Integrate mental health professionals into subways", candidates: ["Stringer"] },
         { text: "Repeal \"right to sleep outside\" + Expand shelters and drop-in centers + Reopen long-term care facilities", candidates: ["Tilson"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC improve healthcare access and outcomes?",
+      stance: "(3 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Prenatal support for homeless mothers", candidates: ["Adams"] },
         { text: "Combat opioids with harm reduction + Audit $150M funding + Track overdose response", candidates: ["Blake"] },
@@ -65,11 +82,12 @@ const quiz = [
         { text: "Protect reproductive rights + Reduce medical debt + Protect retiree healthcare benefits", candidates: ["Lander"] },
         { text: "\"Baby baskets\" for newborns($20M/year)  + Postpartum resources", candidates: ["Mamdani"] },
         { text: "Fund doula coverage + Open Black Maternal Health Centers + Protect providers under Reproductive Health Act", candidates: ["Myrie"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC grow its economy?",
+      stance: " ",
       options: [
         { text: "Inject cash directly to low-income households", candidates: ["Adams"] },
         { text: "Implement guaranteed income pilot + Create municipal hiring surge in underserved neighborhoods + $3.3B Support fund for minority and women-owned businesses", candidates: ["Blake"] },
@@ -80,11 +98,12 @@ const quiz = [
         { text: "Support small business through streamlined permits + Expand minority and women-owned businesses to 50% + Create green jobs through renewable energy investments", candidates: ["Stringer"] },
         { text: "Revitalize the economy by supporting small businesses + Streamline permit process + Create jobs with higher wages", candidates: ["Tilson"] },
         { text: "Support small businesses + Guarantee predictable work hours + Fair pay for gig workers + Expand freelancer protections", candidates: ["Lander"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should New York City improve its transit system?",
+      stance: "(2 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Hire 500 MTA police + Install high-security turnstiles + Implement proof-of-payment turnstiles", candidates: ["Cuomo"] },
         { text: "Make all city buses permanently fare-free + Expand bus priority lanes and loading zones", candidates: ["Mamdani"] },
@@ -93,11 +112,12 @@ const quiz = [
         { text: "Prioritize accessibility improvements and service reliability", candidates: ["Ramos"] },
         { text: "Increase subway safety with dedicated officers + Improve bus reliability + Expand bike lane network ", candidates: ["Stringer"] },
         { text: "Increase police presence and enforcement in subways to confront crime and felony assaults ", candidates: ["Tilson"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question  (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC improve its public schools?",
+      stance: "(2 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Use private funding to expand proven programs ", candidates: ["Adams"] },
         { text: "Auto-admit top 5% to elite schools + expand CUNY aid ", candidates: ["Blake"] },
@@ -106,11 +126,12 @@ const quiz = [
         { text: "Free afterschool programs until 6 PM ", candidates: ["Myrie"] },
         { text: "Extend school days to 4:30 PM", candidates: ["Stringer"] },
         { text: "Focus on basic literacy/math ", candidates: ["Tilson"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question  (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC address child care affordability?",
+      stance: "(4 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Universal childcare regardless of income + Universal Pre-K +$4.8M employer partnership pilot ", candidates: ["Blake"] },
         { text: "Expand 3-K/after-school programs ", candidates: ["Cuomo"] },
@@ -119,32 +140,35 @@ const quiz = [
         { text: "Reverse cuts in universal 3-K/pre-K + $400M to repay delayed provider payments ", candidates: ["Myrie"] },
         { text: "Expand Pre-K/3-K + Enforce paid family leave  ", candidates: ["Lander"] },
         { text: "Share childcare costs between the city, employers, and families + Expand pre-K access ", candidates: ["Stringer"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question  (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC handle immigration and global affairs?",
+      stance: "(4 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Ban ICE from schools/hospitals + Provide childcare to undocumented families", candidates: ["Blake"] },
         { text: "Issue local work permits for asylum seekers + Ban ICE from schools/hospitals", candidates: ["Myrie"] },
         { text: "Provides childcare to undocumented families + Reform asylum-seeker contracts + Expand legal/work services  ", candidates: ["Lander"] },
         { text: "Protect undocumented families + Improve multilingual city services", candidates: ["Ramos"] },
         { text: "Support foreign aid and humanitarian work, including fieldwork in Ukraine. ", candidates: ["Tilson"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question  (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should New York City address climate change and sustainability?",
+      stance: "(5 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Reform scaffolding laws + Boost composting + Streamline outdoor dining permits", candidates: ["Cuomo"] },
         { text: "Accelerate renewable energy (solar, wind, EVs) + Cut 80% building emissions by 2050 + Launch citywide solar program", candidates: ["Lander"] },
         { text: "Sue oil/gas companies + Plant 1M trees + Build flood-resistant streets", candidates: ["Myrie"] },
         { text: "Divest 4B from fossil fuels + Invest 6B in renewables + Publish NYPD spending via Checkbook NYC + Enforce color-coded recycling/composting ", candidates: ["Stringer"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question  (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should New York City protect workers and improve job quality?",
+      stance: "(2 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Provide basic income to reduce wage exploitation", candidates: ["Adams"] },
         { text: "Mandate 3-day payment for nonprofits/freelancers + Create educator housing/retirement communities", candidates: ["Blake"] },
@@ -153,16 +177,17 @@ const quiz = [
         { text: "Require union labor on city-subsidized projects ", candidates: ["Mamdani"] },
         { text: "Seal criminal records for job seekers + Support high-growth sector unions(construction, greenenergy) ", candidates: ["Myrie"] },
         { text: "Continue advocacy for worker protections (passed $2.1B excluded workers fund) + Push for child care worker wage parity + Expand gig worker access to benefits ", candidates: ["Ramos"] },
-        { text: "Skip this Question", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     },
     {
       question: "How should NYC address racial inequality?",
+      stance: "(6 candidates have not declared a stance on this issue.)",
       options: [
         { text: "Prioritize Black/Latinx communities + Address systemic barriers for foster youth and families in shelters. ", candidates: ["Adams"] },
         { text: "Proportional city contracts by borough demographics + Require schools to partner with mentoring programs for young men of color + Expand Black history curriculum. ", candidates: ["Blake"] },
         { text: "Address school segregation + Reduce discriminatory policing + Close racial wealth gap  ", candidates: ["Lander"] },
-        { text: "Skip this Question ", candidates: [], isSkip: true }
+        { text: "Skip this Question (No Impact on score)", candidates: [], isSkip: true }
       ]
     }
 ];
@@ -196,7 +221,7 @@ function showQuestion(index) {
   //     <h3>Question ${index + 1}/${quiz.length}: ${q.question}</h3>
   //   </div>
   // `;
-  
+
   // Create question container but number of question seperate of question div
   let questionHTML = `
   <div class="question-number">
@@ -204,6 +229,9 @@ function showQuestion(index) {
   </div>
   <div class="question">
     <h3>${q.question}</h3>
+  </div>
+  <div class="stance">
+    <h4>${q.stance}</h4>
   </div>
 `;
   
@@ -306,6 +334,145 @@ function goBack() {
   showQuestion(currentQuestionIndex);
 }
 
+// function showResults() {
+//   // Hide quiz container
+//   quizContainer.style.display = 'none';
+  
+//   // Show results container
+//   resultsContainer.style.display = 'block';
+
+//   // Filter out candidates with zero points
+//   const nonZeroResults = Object.entries(candidates)
+//     .filter(([_, score]) => score > 0)
+//     .sort((a, b) => b[1] - a[1]);
+
+//   let resultHTML = '<div class="results-title"><h2>Matching Results</h2></div><div><h4>In primary and special elections for city offices, you can now rank up to five candidates in order of preference instead of choosing just one.</h4></div><div class="nyc-votes"><h3>Visit NYC Votes</h3></div>';
+  
+//   if (nonZeroResults.length === 0) {
+//     resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
+//   } else {
+//     // Show top 5 candidates with non-zero scores
+//     const topCandidates = nonZeroResults.slice(0, 5);
+    
+//     // Create the list of top candidates
+//     topCandidates.forEach(([name, score], i) => {
+//       resultHTML += `
+//         <div class="candidate-result">
+//           <span class="candidate-rank">${i + 1}.</span>
+//           <span class="candidate-name">${name}</span>
+//           <span class="candidate-score">- ${score} Point${score > 1 ? 's' : ''}</span>
+//         </div>
+//       `;
+//     });
+    
+//     //display questions skipped
+//   resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+
+//   function showResults() {
+//   // Hide quiz container
+//   quizContainer.style.display = 'none';
+  
+//   // Show results container
+//   resultsContainer.style.display = 'block';
+
+//   // Filter out candidates with zero points
+//   const nonZeroResults = Object.entries(candidates)
+//     .filter(([_, score]) => score > 0)
+//     .sort((a, b) => b[1] - a[1]);
+
+//   let resultHTML = '<h2>Your Top Candidates</h2>';
+  
+//   if (nonZeroResults.length === 0) {
+//     resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
+//   } else {
+//     // Show top 5 candidates with non-zero scores
+//     const topCandidates = nonZeroResults.slice(0, 5);
+    
+//     // Create the list of top candidates
+//     topCandidates.forEach(([name, score], i) => {
+//       resultHTML += `
+//         <div class="candidate-result">
+//           <span class="candidate-rank">${i + 1}.</span>
+//           <span class="candidate-name">${name}</span>
+//           <span class="candidate-score">- ${score} Point${score > 1 ? 's' : ''}</span>
+//         </div>
+//       `;
+//     });
+    
+//     //display questions skipped
+//     resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
+
+//     // Display ALL top candidate profiles
+//     topCandidates.forEach(([name, score], i) => {
+//       resultHTML += `
+//         <div class="candidate-profile">
+//           <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
+//           <h3>${name}</h3>
+//           <a href="#" class="candidate-website">Visit Website</a>
+          
+//           <div class="stats-container">
+//             <div class="rank-box">#${i + 1}</div>
+//             <div class="questions-aligned">
+//               ${score}/${quiz.length} Aligned
+//             </div>
+//           </div>
+//         </div>
+//       `;
+//     });
+//   }
+
+//   resultsContainer.innerHTML = resultHTML;
+// }
+
+
+  
+//     // // Display the top candidate profile
+//     // const topCandidate = topCandidates[0];
+//     // if (topCandidate) {
+//     //   const [name, score] = topCandidate;
+//     //   resultHTML += `
+//     //     <div class="candidate-profile">
+//     //       <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
+//     //       <h3>${name}</h3>
+//     //       <a href="#" class="candidate-website">Visit Website</a>
+          
+//     //       <div class="stats-container">
+//     //         <div class="rank-box">#1</div>
+//     //         <div class="questions-aligned">
+//     //           ${score}/${quiz.length} Aligned
+//     //         </div>
+//     //       </div>
+//     //     </div>
+//     //   `;
+//     // }
+//   // }
+
+//       // // Display the top candidate profile
+//   topCandidates.forEach(([name, score], i) => {
+//     resultHTML += `
+//       <div class="candidate-profile">
+//         <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
+//         <h3>${name}</h3>
+//         <a href="#" class="candidate-website">Visit Website</a>
+        
+//         <div class="stats-container">
+//           <div class="rank-box">#${i + 1}</div>
+//           <div class="questions-aligned">
+//             ${score}/${quiz.length} Aligned
+//           </div>
+//         </div>
+//       </div>
+//     `;
+//   });
+// }
+
+  
+
+//   resultsContainer.innerHTML = resultHTML;
+// }
+
+
+// Replace your entire showResults function with this one
 function showResults() {
   // Hide quiz container
   quizContainer.style.display = 'none';
@@ -318,7 +485,7 @@ function showResults() {
     .filter(([_, score]) => score > 0)
     .sort((a, b) => b[1] - a[1]);
 
-  let resultHTML = '<h2>Your Top Candidates</h2>';
+  let resultHTML = '<div class="results-title"><h2>Matching Results</h2></div><div><h4>In primary and special elections for city offices, you can now rank up to five candidates in order of preference instead of choosing just one.</h4></div><div class="nyc-votes"><h3>Visit NYC Votes</h3></div>';
   
   if (nonZeroResults.length === 0) {
     resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
@@ -326,60 +493,28 @@ function showResults() {
     // Show top 5 candidates with non-zero scores
     const topCandidates = nonZeroResults.slice(0, 5);
     
-    // Create the list of top candidates
+    // Create the list of top candidates with full names
     topCandidates.forEach(([name, score], i) => {
+      const fullName = candidateFullNames[name] || name; // Fallback to short name if mapping doesn't exist
       resultHTML += `
         <div class="candidate-result">
           <span class="candidate-rank">${i + 1}.</span>
-          <span class="candidate-name">${name}</span>
+          <span class="candidate-name">${fullName}</span>
           <span class="candidate-score">- ${score} Point${score > 1 ? 's' : ''}</span>
         </div>
       `;
     });
     
-    //display questions skipped
-  resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
-
-  function showResults() {
-  // Hide quiz container
-  quizContainer.style.display = 'none';
-  
-  // Show results container
-  resultsContainer.style.display = 'block';
-
-  // Filter out candidates with zero points
-  const nonZeroResults = Object.entries(candidates)
-    .filter(([_, score]) => score > 0)
-    .sort((a, b) => b[1] - a[1]);
-
-  let resultHTML = '<h2>Your Top Candidates</h2>';
-  
-  if (nonZeroResults.length === 0) {
-    resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
-  } else {
-    // Show top 5 candidates with non-zero scores
-    const topCandidates = nonZeroResults.slice(0, 5);
-    
-    // Create the list of top candidates
-    topCandidates.forEach(([name, score], i) => {
-      resultHTML += `
-        <div class="candidate-result">
-          <span class="candidate-rank">${i + 1}.</span>
-          <span class="candidate-name">${name}</span>
-          <span class="candidate-score">- ${score} Point${score > 1 ? 's' : ''}</span>
-        </div>
-      `;
-    });
-    
-    //display questions skipped
+    // Display questions skipped
     resultHTML += `<p>Questions skipped: ${questionStats.skipped}</p>`;
 
-    // Display ALL top candidate profiles
+    // Display ALL top candidate profiles with full names
     topCandidates.forEach(([name, score], i) => {
+      const fullName = candidateFullNames[name] || name; // Fallback to short name if mapping doesn't exist
       resultHTML += `
         <div class="candidate-profile">
-          <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
-          <h3>${name}</h3>
+          <img src="${name.toLowerCase()}.png" alt="${fullName}" onerror="this.src='placeholder.png'">
+          <h3>${fullName}</h3>
           <a href="#" class="candidate-website">Visit Website</a>
           
           <div class="stats-container">
@@ -392,53 +527,6 @@ function showResults() {
       `;
     });
   }
-
-  resultsContainer.innerHTML = resultHTML;
-}
-
-
-  
-    // // Display the top candidate profile
-    // const topCandidate = topCandidates[0];
-    // if (topCandidate) {
-    //   const [name, score] = topCandidate;
-    //   resultHTML += `
-    //     <div class="candidate-profile">
-    //       <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
-    //       <h3>${name}</h3>
-    //       <a href="#" class="candidate-website">Visit Website</a>
-          
-    //       <div class="stats-container">
-    //         <div class="rank-box">#1</div>
-    //         <div class="questions-aligned">
-    //           ${score}/${quiz.length} Aligned
-    //         </div>
-    //       </div>
-    //     </div>
-    //   `;
-    // }
-  // }
-
-      // // Display the top candidate profile
-  topCandidates.forEach(([name, score], i) => {
-    resultHTML += `
-      <div class="candidate-profile">
-        <img src="${name.toLowerCase()}.png" alt="${name}" onerror="this.src='placeholder.png'">
-        <h3>${name}</h3>
-        <a href="#" class="candidate-website">Visit Website</a>
-        
-        <div class="stats-container">
-          <div class="rank-box">#${i + 1}</div>
-          <div class="questions-aligned">
-            ${score}/${quiz.length} Aligned
-          </div>
-        </div>
-      </div>
-    `;
-  });
-}
-
-  
 
   resultsContainer.innerHTML = resultHTML;
 }
