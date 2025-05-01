@@ -60,13 +60,21 @@
   
   .nav-overlay li {
     margin: 0 0;
+    list-style: none; 
+        
   }
   
   .nav-overlay a {
     color: white;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: rem;
     font-weight: 600;
+           
+    /* prevent nav text to wrap around */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
   }
   
   /* Desktop navbar */
@@ -84,6 +92,7 @@
       background: none;
       height: auto;
       width: auto;
+      
     }
   
     .nav-overlay li {
@@ -112,11 +121,12 @@
   
   /* Headline */
   .headline {
-    margin-top: 2rem;
+    margin-top: 1vh;
     font-size: 2rem;
     line-height: 1;
     text-align: left;
     padding: 1rem;
+    max-width: 860px;
   }
   
   .headline span {
@@ -137,6 +147,7 @@
   
   .candidate-card h3 {
     margin-top: 0.5rem;
+    
   }
   
   .visit-link {
@@ -213,7 +224,7 @@
   .candidate-card h3 {
     color: white;
     font-size: 1.5rem;
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 0.5rem;
     text-align: left;
     line-height: 1.3rem;
@@ -230,7 +241,7 @@
   }
   
   .note {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     margin-top: 1rem;
     text-align: left;
     padding-left: 1rem;
@@ -266,7 +277,7 @@ nav {
     font-size: 1.5rem;
     line-height: 1.1;
     color: white;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 0.1rem;
   }
   
   /* Hamburger */
@@ -303,7 +314,7 @@ nav {
     width: 100%;
     border-top: 1px solid white;
     border-bottom: 1px solid white;
-  }
+      }
   
   .nav-overlay li:nth-child(2) {
     border-top: none;
@@ -372,6 +383,7 @@ nav {
       height: auto;
       background: none;
       width: auto;
+    
     }
     .nav-overlay li {
       margin: 0 1rem;
@@ -387,7 +399,8 @@ nav {
 .can-home {
     width: 100%;
     height: auto;
-    margin-top: 3vh;
+    max-height: 60vh;
+    margin-top: 2vh;
     object-fit: cover
 }
 
@@ -396,17 +409,18 @@ nav {
     background-color: #3cff00;
     color: black;
     font-family: 'Inter', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 1rem 5rem;
-    max-width: 600px;
+    max-width: 830px;
     width: 100%;
     border: none;
     border-radius: 1px;
     text-decoration: none;
     font-weight: 600;
     cursor: pointer;
-    width: 87vw;
+    width: 94vw;
     text-align: center;
+    margin-top: 4vh;
   }
   
 
@@ -472,7 +486,7 @@ nav {
     flex-direction: column;
     align-items: left;
     padding: 2rem 1rem;
-    max-width: 1200px;
+    max-width: 830px;
     margin: 0 auto;
     margin-top: 60px;
     padding: 32px 0 32px 0;
