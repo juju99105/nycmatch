@@ -20,6 +20,18 @@ const candidateFullNames = {
   "Ramos": "Jessica Ramos"
 };
 
+const candidateWebsite = {
+  "Adams": "https://adrienneforthepeople.com/",
+  "Blake": "https://blakefornyc.com/",
+  "Cuomo": "https://www.andrewcuomo.com/",
+  "Lander": "https://www.landerfornyc.com/",
+  "Myrie": "https://www.zellnor.nyc/",
+  "Stringer": "https://scottstringernyc.com/",
+  "Tilson": "https://www.whitneyformayor.com/",
+  "Mamdani": "https://www.zohranfornyc.com/",
+  "Ramos": "https://www.ramosfornyc.com/"
+};
+
 const quiz = [
     {
       question: "How can NYC government become more transparent?",
@@ -511,6 +523,7 @@ function showResults() {
     // Display ALL top candidate profiles with full names
     topCandidates.forEach(([name, score], i) => {
       const fullName = candidateFullNames[name] || name; // Fallback to short name if mapping doesn't exist
+      const website = candidateWebsite[name] || "#";
       resultHTML += `
         <div class="candidate-profile">
           <img src="img/background/${name.toLowerCase()}.jpg" alt="${fullName}" onerror="this.src='placeholder.jpg'">
@@ -520,7 +533,7 @@ function showResults() {
             </div>
             <div class="stats-container-1">
               <h3>${fullName}</h3>
-              <a href="#" class="candidate-website">Visit Website</a>
+              <a href="${website}" class="candidate-website" target="_blank">Visit Website</a>
             </div>
           </div>
         </div>
