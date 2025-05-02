@@ -513,7 +513,7 @@ function showResults() {
       const fullName = candidateFullNames[name] || name; // Fallback to short name if mapping doesn't exist
       resultHTML += `
         <div class="candidate-profile">
-          <img src="${name.toLowerCase()}.png" alt="${fullName}" onerror="this.src='placeholder.png'">
+          <img src="img/background/${name.toLowerCase()}.jpg" alt="${fullName}" onerror="this.src='placeholder.jpg'">
           <div class="stats-containers">
             <div class="stats-container-2">
               <div class="rank-box">#${i + 1}</div>
