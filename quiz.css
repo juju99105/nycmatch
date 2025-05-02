@@ -1,7 +1,7 @@
 /* Quiz styling */
-#quiz-container, #results {
+#quiz-container {
   display: none;
-  margin-top: 17vh;
+  margin-top: 14vh;
   width: 100%;
   max-width: 600px;
   margin-left: auto;
@@ -21,7 +21,7 @@ body.quiz-body {
 .container-quiz-page {
   display: block;
   text-align: left;
-  margin-top: 80px;
+  margin-top: 14vh;
   padding: 0 20px;
 }
 
@@ -138,39 +138,67 @@ body.quiz-body {
 
 /* Results page styling */
 #results {
-  background-color: white;
-  padding: 20px;
+  background-color: #003cff;
+  padding: 1rem 0 7rem 0;
   text-align: left;
-  margin-top: 11vh;
+  margin-top: 10vh;
+  display: none;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
 #results h2 {
-  color: #003cff;
+  color: white;
   font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-weight: 600;
+  font-weight: 400;
+  padding-left: 2vh;
 }
 
 .nyc-votes{
-  border-bottom: 1px solid #003cff;
+  border-bottom: 1px solid white;
+  padding: 2vh;
+  margin-bottom: 2vh;
+}
+
+.nyc-votes h3{
+  /* margin-top: 20px; */
+  /* margin-bottom: 2rem; */
+  font-weight: 400;
+  color: white;
+}
+
+.nyc-votes h3 a{
+  color: #3CFF00;
 }
 
 .nyc-votes h4{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  /* margin-top: 20px; */
+  margin-bottom: 2vh;
+  font-weight: 200;
+  color: white;
 }
 
+#results p{
+  padding: 1vh 2vh 1vh 2vh;
+  color: white;
+} 
+
 .results-title{
-  border-top: 1px solid #003cff;
-  border-bottom: 1px solid #003cff;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .candidate-result {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 0;
+  padding: 1vh 2vh 1vh 2vh;
+  color: white;
 }
 
 .candidate-rank {
@@ -184,24 +212,25 @@ body.quiz-body {
 }
 
 .candidate-score {
-  color: #666;
+  color: #3CFF00;
 }
 
 .candidate-profile {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .candidate-profile img {
   width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
+  max-width: 41vh;
+  /* margin: 0vh 6vh 2vh 6vh; */
 }
 
 .candidate-profile h3 {
-  color: #003cff;
-  font-size: 1.8rem;
+  color: white;
+  font-size: 1.5rem;
   margin-bottom: 5px;
 }
 
@@ -211,19 +240,19 @@ body.quiz-body {
   margin-bottom: 20px;
 }
 
-.stats-container {
+/* .stats-container {
   margin-top: 20px;
   display: flex;
   align-items: center;
-}
+} */
 
 .rank-box {
-  background-color: #3cff00;
-  color: black;
-  font-weight: 700;
-  font-size: 1.8rem;
+  /* background-color: #3cff00; */
+  color: white;
+  font-weight: 400;
+  font-size: 3.3rem;
   padding: 15px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,10 +267,6 @@ body.quiz-body {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .container-quiz-page {
-    margin-top: 7rem;
-  }
-  
   .question h3 {
     font-size: 1.1rem;
   }
@@ -291,4 +316,18 @@ body.quiz-body {
   font-size: 0.7rem;
   font-weight: 200;
   margin-bottom: 1vh;
+}
+
+.stats-container-1{
+  color: white;
+  margin-left: 3vh;
+}
+
+.stats-containers{
+  /* padding: 0vh 5vh 1vh 6vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  margin-top: 2vh;
+  /* flex-direction: row; */
 }

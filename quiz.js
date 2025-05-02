@@ -485,8 +485,8 @@ function showResults() {
     .filter(([_, score]) => score > 0)
     .sort((a, b) => b[1] - a[1]);
 
-  let resultHTML = '<div class="results-title"><h2>Matching Results</h2></div><div><h4>In primary and special elections for city offices, you can now rank up to five candidates in order of preference instead of choosing just one.</h4></div><div class="nyc-votes"><h3>Visit NYC Votes</h3></div>';
-  
+  let resultHTML = '<div class="results-title"><h2>Matching Results</h2></div><div class="nyc-votes"><h4>In primary and special elections for city offices, you can now rank up to five candidates in order of preference instead of choosing just one.</h4><h3><a href="https://www.nycvotes.org/how-to-vote/ranked-choice-voting/">Visit NYC Votes</a></h3></div>';
+
   if (nonZeroResults.length === 0) {
     resultHTML += '<p>No candidates matched your preferences. Try answering more questions.</p>';
   } else {
@@ -514,13 +514,13 @@ function showResults() {
       resultHTML += `
         <div class="candidate-profile">
           <img src="${name.toLowerCase()}.png" alt="${fullName}" onerror="this.src='placeholder.png'">
-          <h3>${fullName}</h3>
-          <a href="#" class="candidate-website">Visit Website</a>
-          
-          <div class="stats-container">
-            <div class="rank-box">#${i + 1}</div>
-            <div class="questions-aligned">
-              ${score}/${quiz.length} Aligned
+          <div class="stats-containers">
+            <div class="stats-container-2">
+              <div class="rank-box">#${i + 1}</div>
+            </div>
+            <div class="stats-container-1">
+              <h3>${fullName}</h3>
+              <a href="#" class="candidate-website">Visit Website</a>
             </div>
           </div>
         </div>
