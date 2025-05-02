@@ -520,7 +520,7 @@ nav {
     color: black;
     font-weight: 200;
     overflow: hidden;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 h2.intro-title{
@@ -528,9 +528,9 @@ h2.intro-title{
     font-weight: 800;
 }
 
-.container-quiz-page{
+/* .container-quiz-page{
     margin-top: 7vh;
-}
+} */
 
 .about-title-div{
   padding: 2rem 2rem 2rem 2rem;
