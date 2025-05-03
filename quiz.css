@@ -288,20 +288,6 @@ body.quiz-body {
   }
 }
 
-/* Media query for iPhone SE (375px width) */
-@media (max-width: 375px) {
-  #results {
-    margin-top: 12vh;
-  }
-
-  .container-quiz-page {
-    margin-top: 17vh;
-  }
-
-  #quiz-container{
-    margin-top: 17vh;
-  }
-}
 
 
 .question-number{
@@ -354,13 +340,29 @@ body.quiz-body {
   /* flex-direction: row; */
 }
 
-/* Media query for iPhone 14pro (430px width) */
-@media (max-width: 430px) {
+/* iPhone 14 Pro and similar sizes (376px to 430px) */
+@media (max-width: 430px) and (min-width: 376px) {
   #results {
     margin-top: 9.1vh;
   }
 }
 
+/* iPhone SE (361px to 375px) */
+@media (max-width: 375px) and (min-width: 361px) {
+  #results {
+    margin-top: 12vh;
+  }
+  
+  .container-quiz-page {
+    margin-top: 17vh;
+  }
+  
+  #quiz-container {
+    margin-top: 17vh;
+  }
+}
+
+/* Smallest screens (360px and below) */
 @media (max-width: 360px) {
   #results {
     margin-top: 10vh;
