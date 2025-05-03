@@ -118,7 +118,7 @@ body.quiz-body {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  margin-bottom: 12vh; /* Add space at bottom */
+  margin-bottom: 18vh; /* Add space at bottom */
 }
 
 .navigation-buttons button {
