@@ -88,6 +88,7 @@ body.quiz-body {
 #quiz-container button {
   display: block;
   width: 100%;
+  color: black;
   background-color: white;
   border-bottom: 1px solid grey;
   border-top: none;
