@@ -405,24 +405,59 @@ nav {
 }
 
 .start-button {
-    margin-top: 10vh;
-    background-color: #3cff00;
-    color: black;
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    padding: 1rem 5rem;
-    max-width: 830px;
-    width: 100%;
-    border: none;
-    border-radius: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    cursor: pointer;
-    width: 94vw;
-    text-align: center;
-    margin-top: 4vh;
-  }
-  
+  margin-top: 10vh;
+  background-color: #3cff00;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  padding: 1rem 5rem;
+  max-width: 830px;
+  width: 100%;
+  border: none;
+  border-radius: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  width: 94vw;
+  text-align: center;
+  margin-top: 4vh;
+  /* Add these properties to center the button */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+.start-button1 {
+  margin-top: 10vh;
+  background-color: #3cff00;
+  color: black;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  padding: 1rem 0; /* Remove horizontal padding */
+  width: 100%; /* Full width */
+  max-width: 830px; /* Maximum width */
+  border: none;
+  border-radius: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 9vh;
+  /* Add these properties to center the button */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Prevent text wrapping */
+  white-space: nowrap;
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Show ellipsis if text overflows */
+}
+
+
+.start-button1 h3{
+  font-weight: 600;
+}
+
 
   .about-page {
     width: 100%;

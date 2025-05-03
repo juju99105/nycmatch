@@ -1,7 +1,7 @@
 /* Quiz styling */
 #quiz-container {
   display: none;
-  margin-top: 14vh;
+  margin-top: 13vh;
   width: 100%;
   max-width: 600px;
   margin-left: auto;
@@ -94,7 +94,6 @@ body.quiz-body {
   border-left: none;
   border-right: none;
   padding: 15px;
-  color: black;
   /* margin-bottom: 10px; */
   /* margin-top: 10px; */
   text-align: left;
@@ -118,7 +117,7 @@ body.quiz-body {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
-  margin-bottom: 40px; /* Add space at bottom */
+  margin-bottom: 12vh; /* Add space at bottom */
 }
 
 .navigation-buttons button {
@@ -315,8 +314,13 @@ body.quiz-body {
 .stance {
   margin-top: 2vh;
   font-size: 0.7rem;
-  font-weight: 200;
+  font-weight: 100;
   margin-bottom: 1vh;
+  color: #949494;
+}
+
+.stance h4{
+  font-weight: 100;
 }
 
 .stats-container-1{
